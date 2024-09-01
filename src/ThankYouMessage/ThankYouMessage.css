@@ -1,0 +1,303 @@
+/* Dark theme background and text colors */
+.thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    position: relative;
+    overflow: hidden;
+    color: #f5f5f5;
+
+}
+
+.thank-you-message {
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.8); /* Slight transparency for better effect */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.thank-you-message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.thank-you-message p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Sprinkles styling */
+.sprinkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.sprinkle {
+    width: 8px;
+    height: 16px;
+    background-color: #ffc107;
+    position: absolute;
+    top: -20px;
+    animation: fall 4s infinite linear;
+    opacity: 0.8;
+    transform: rotate(15deg);
+}
+
+/* Keyframes for falling effect */
+@keyframes fall {
+    to {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Randomize sprinkle positions and colors */
+.sprinkle:nth-child(odd) {
+    background-color: #ff4081;
+}
+
+.sprinkle:nth-child(even) {
+    background-color: #3f51b5;
+}
+
+.sprinkle:nth-child(3n) {
+    background-color: #4caf50;
+}
+
+.sprinkle:nth-child(4n) {
+    background-color: #ffeb3b;
+}
+
+.sprinkle:nth-child(5n) {
+    background-color: #00bcd4;
+}
+
+.sprinkle {
+    left: calc(var(--i) * 5%);
+    animation-duration: calc(var(--j) * 2s + 2s);
+    animation-delay: calc(var(--j) * -2s);
+}
+
+.sprinkle:nth-child(1) {
+    --i: 1;
+    --j: 1;
+}
+
+.sprinkle:nth-child(2) {
+    --i: 2;
+    --j: 2;
+}
+
+.sprinkle:nth-child(3) {
+    --i: 3;
+    --j: 3;
+}
+
+.sprinkle:nth-child(4) {
+    --i: 4;
+    --j: 4;
+}
+
+.sprinkle:nth-child(5) {
+    --i: 5;
+    --j: 5;
+}
+
+.sprinkle:nth-child(6) {
+    --i: 6;
+    --j: 6;
+}
+
+.sprinkle:nth-child(7) {
+    --i: 7;
+    --j: 7;
+}
+
+.sprinkle:nth-child(8) {
+    --i: 8;
+    --j: 8;
+}
+
+.sprinkle:nth-child(9) {
+    --i: 9;
+    --j: 9;
+}
+
+.sprinkle:nth-child(10) {
+    --i: 10;
+    --j: 10;
+}
+
+.sprinkle:nth-child(11) {
+    --i: 11;
+    --j: 11;
+}
+
+.sprinkle:nth-child(12) {
+    --i: 12;
+    --j: 12;
+}
+
+.sprinkle:nth-child(13) {
+    --i: 13;
+    --j: 13;
+}
+
+.sprinkle:nth-child(14) {
+    --i: 14;
+    --j: 14;
+}
+
+.sprinkle:nth-child(15) {
+    --i: 15;
+    --j: 15;
+}
+
+.sprinkle:nth-child(16) {
+    --i: 16;
+    --j: 16;
+}
+
+.sprinkle:nth-child(17) {
+    --i: 17;
+    --j: 17;
+}
+
+.sprinkle:nth-child(18) {
+    --i: 18;
+    --j: 18;
+}
+
+.sprinkle:nth-child(19) {
+    --i: 19;
+    --j: 19;
+}
+
+.sprinkle:nth-child(20) {
+    --i: 20;
+    --j: 20;
+}
+
+/* Balloons styling */
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.balloon {
+    width: 40px;
+    height: 60px;
+    background-color: #ff4081;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: rise 7s infinite ease-in;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
+.balloon:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: #555;
+    left: 50%;
+    bottom: -100px;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
+/* Randomize balloon positions and colors */
+.balloon:nth-child(odd) {
+    background-color: #ff4081;
+}
+
+.balloon:nth-child(even) {
+    background-color: #3f51b5;
+}
+
+.balloon:nth-child(3n) {
+    background-color: #4caf50;
+}
+
+.balloon:nth-child(4n) {
+    background-color: #ffeb3b;
+}
+
+.balloon:nth-child(5n) {
+    background-color: #00bcd4;
+}
+
+.balloon {
+    left: calc(var(--i) * 10%);
+    animation-duration: calc(var(--j) * 3s + 4s);
+    animation-delay: calc(var(--j) * -2s);
+}
+
+.balloon:nth-child(1) {
+    --i: 1;
+    --j: 1;
+}
+
+.balloon:nth-child(2) {
+    --i: 2;
+    --j: 2;
+}
+
+.balloon:nth-child(3) {
+    --i: 3;
+    --j: 3;
+}
+
+.balloon:nth-child(4) {
+    --i: 4;
+    --j: 4;
+}
+
+.balloon:nth-child(5) {
+    --i: 5;
+    --j: 5;
+}
+
+.balloon:nth-child(6) {
+    --i: 6;
+    --j: 6;
+}
+
+.balloon:nth-child(7) {
+    --i: 7;
+    --j: 7;
+}
+
+.balloon:nth-child(8) {
+    --i: 8;
+    --j: 8;
+}
+
+.balloon:nth-child(9) {
+    --i: 9;
+    --j: 9;
+}
+
+.balloon:nth-child(10) {
+    --i: 10;
+    --j: 10;
+}
